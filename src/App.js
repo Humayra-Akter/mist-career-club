@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Shared/Navbar";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Blog from "./Components/Blog/Blog";
+import Contact from "./Components/Contact/Contact";
+import Events from "./Components/Events/Events";
+import Partnerships from "./Components/Partnerships/Partnerships";
+import Resources from "./Components/Resources/Resources";
+import Error from "./Components/Error/Error";
+import SharedHeader from "./Components/Shared/SharedHeader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="hidden lg:block">
+        <SharedHeader />
+      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/partnerships" element={<Partnerships />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/*" element={<Error />} />
+      </Routes>
     </div>
   );
 }
