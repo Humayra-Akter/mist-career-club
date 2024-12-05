@@ -1,16 +1,15 @@
 import React from "react";
 import Banner from "./Banner";
-import Statics from "./Statics";
 import HomeAbout from "./HomeAbout";
 import HomeEvents from "./HomeEvents";
+import Organogram from "./Organogram";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <HomeAbout />
-
-      <Statics />
+      <Organogram />
       <HomeEvents />
     </div>
   );
