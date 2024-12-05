@@ -24,3 +24,20 @@ h6 {
   font-weight: bold;
 }
 
+/* Global CSS */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll linear infinite;
+}
+
+
