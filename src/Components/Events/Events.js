@@ -10,6 +10,7 @@ import img233 from "../../assets/2023/HSBCWorkplacementSeminar/1.jpg";
 import img234 from "../../assets/2023/MISTCampusTownhallGPacademy/1.jpg";
 import img241 from "../../assets/2024/catchTheHour2/1.jpg";
 import img242 from "../../assets/2024/riseAboveAll/1.png";
+import Modal from "./Modal";
 
 const eventData = {
   2022: [
@@ -31,26 +32,7 @@ const eventData = {
   ],
 };
 
-const Modal = ({ event, onClose }) => {
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg p-5 w-4/5 max-w-lg">
-        <h2 className="text-2xl font-bold mb-4">{event.name}</h2>
-        <img
-          src={event.image}
-          alt={event.name}
-          className="w-full h-auto rounded-md mb-4"
-        />
-        <button
-          className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
-          onClick={onClose}
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  );
-};
+
 
 const Events = () => {
   const [selectedYear, setSelectedYear] = useState("all");
@@ -73,7 +55,7 @@ const Events = () => {
   return (
     <div className="p-4">
       {/* Year Selection Menu */}
-      <div className="flex justify-center space-x-4 mb-6">
+      <div className="flex flex-wrap gap-4 justify-center space-x-4 mb-6">
         <button
           className={`px-4 py-2 rounded-lg text-white ${
             selectedYear === "all" ? "bg-primary font-bold" : "bg-gray-500"
@@ -82,7 +64,7 @@ const Events = () => {
         >
           All Events
         </button>
-        {Object.keys(eventData).map((year) => (
+        {Object?.keys(eventData).map((year) => (
           <button
             key={year}
             className={`px-4 py-2 rounded-lg text-white ${
@@ -96,8 +78,8 @@ const Events = () => {
       </div>
 
       {/* Event Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-20 gap-4">
-        {filteredEvents.map((event, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:px-20 gap-4">
+        {filteredEvents?.map((event, index) => (
           <div
             key={index}
             className="relative bg-cover bg-center rounded-lg h-40 cursor-pointer shadow-lg transform transition duration-300 hover:scale-105 hover:ring-2 hover:ring-primary"
