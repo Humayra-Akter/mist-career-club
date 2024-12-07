@@ -4,6 +4,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaFacebook,
+  FaLinkedin,
 } from "react-icons/fa";
 
 const SharedHeader = () => {
@@ -40,6 +41,15 @@ const SharedHeader = () => {
           >
             <FaFacebook className="transition-transform animate-pulse group-hover:scale-125" />
             <span className="transition-colors text-accent">Facebook</span>
+          </a>{" "}
+          <a
+            href="https://www.linkedin.com/company/mist-career-club/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 group text-secondary hover:text-accent"
+          >
+            <FaLinkedin className="transition-transform animate-pulse group-hover:scale-125" />
+            <span className="transition-colors text-accent">LinkedIn</span>
           </a>
         </div>
       </div>
