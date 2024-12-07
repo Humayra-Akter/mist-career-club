@@ -10,7 +10,9 @@ const Home = () => {
     <div>
       <Banner />
       <HomeAbout />
+      <div className="hidden lg:block">
       <Organogram />
+      </div>
       <Activities />
       <HomeEvents />
     </div>
