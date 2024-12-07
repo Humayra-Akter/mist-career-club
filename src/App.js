@@ -3,13 +3,13 @@ import Navbar from "./Components/Shared/Navbar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Blog from "./Components/Blog/Blog";
-import Contact from "./Components/Contact/Contact";
 import Events from "./Components/Events/Events";
 import Partnerships from "./Components/Partnerships/Partnerships";
 import Resources from "./Components/Resources/Resources";
 import Error from "./Components/Error/Error";
 import SharedHeader from "./Components/Shared/SharedHeader";
 import Footer from "./Components/Shared/Footer";
+import Team from "./Components/Team/Team";
 
 function App() {
   return (
@@ -23,9 +23,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/partnerships" element={<Partnerships />} />
-        {/* <Route path="/resources" element={<Resources />} /> */}
+        <Route path="/resources" element={<Resources />} /> 
         <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />

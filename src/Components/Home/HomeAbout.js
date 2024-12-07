@@ -19,9 +19,9 @@ const HomeAbout = () => {
         "By joining, members gain access to exclusive events, mentorship programs, and valuable networking opportunities with industry leaders.",
     },
     {
-      question: "About MIST Career Club?",
+      question: "What does MIST Career Club do?",
       answer:
-        "Established in 2010, the club has hosted over 150 events, collaborated with 50+ industry partners, and empowered more than 3,000 students.",
+        "MIST Career Club does not only create ample inter-personal skill nourishment opportunities,  but also works to establish a mutual collaborative relation for a longer term, with the ultimate goal of bridging the skills gap between campus and professional life.",
     },
   ];
 
@@ -40,7 +40,7 @@ const HomeAbout = () => {
           The MIST Career Club is one of the premier student organizations at
           Military Institute of Science and Technology, empowering students with
           professional skills, mentorship opportunities, and real-world exposure
-          since its establishment in 2010. With a mission to foster career
+          since its establishment in 2017. With a mission to foster career
           excellence, the club has grown to become a hub for innovation and
           collaboration.
         </p>

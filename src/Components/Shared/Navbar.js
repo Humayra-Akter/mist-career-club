@@ -6,11 +6,11 @@ import {
   FaInfoCircle,
   FaBook,
   FaHandshake,
-  FaEnvelope,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
 import logo from "../../assets/images/logo/dark-logo.png";
+import { FaUserGroup } from "react-icons/fa6";
 
 const Navbar = () => {
   const location = useLocation();
@@ -30,9 +30,9 @@ const Navbar = () => {
     { name: "Home", path: "/", icon: <FaHome /> },
     { name: "Events", path: "/events", icon: <FaCalendarAlt /> },
     { name: "About Us", path: "/about", icon: <FaInfoCircle /> },
-    { name: "Resources", path: "/resources", icon: <FaBook /> },
+    // { name: "Resources", path: "/resources", icon: <FaBook /> },
     { name: "Partnerships", path: "/partnerships", icon: <FaHandshake /> },
-    { name: "Contact Us", path: "/contact", icon: <FaEnvelope /> },
+    { name: "Our Team", path: "/team", icon: <FaUserGroup /> },
   ];
 
   return (
