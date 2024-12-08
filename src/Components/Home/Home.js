@@ -4,6 +4,7 @@ import HomeAbout from "./HomeAbout";
 import HomeEvents from "./HomeEvents";
 import Organogram from "./Organogram";
 import Activities from "./Activities";
+import Partners from "./Partners";
 
 const Home = () => {
   return (
@@ -11,10 +12,11 @@ const Home = () => {
       <Banner />
       <HomeAbout />
       <div className="hidden lg:block">
-      <Organogram />
+        <Organogram />
       </div>
       <Activities />
       <HomeEvents />
+      <Partners />
     </div>
   );
 };
