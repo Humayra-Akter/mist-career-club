@@ -5,6 +5,7 @@ import HomeEvents from "./HomeEvents";
 import Organogram from "./Organogram";
 import Activities from "./Activities";
 import Partners from "./Partners";
+import KeyArea from "./KeyArea";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Organogram />
       </div>
       <Activities />
+      <KeyArea />
       <HomeEvents />
       <Partners />
     </div>
