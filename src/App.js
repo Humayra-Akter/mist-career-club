@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Navbar from "./Components/Shared/Navbar";
@@ -14,59 +14,46 @@ import Footer from "./Components/Shared/Footer";
 import Team from "./Components/Team/Team";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    // Simulate a loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // Adjust the duration as needed
+    setIsAnimating(true);
+    const timer = setTimeout(() => setIsAnimating(false), 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div>
-      {/* Animated Loading Screen */}
-      {/* <AnimatePresence>
-    {isLoading && (
-      <motion.div
-        className="fixed inset-0 z-50 bg-blue-500 flex items-center justify-center"
-        initial={{ x: "0%" }}
-        animate={{ x: "100%" }}
-        exit={{ x: "100%" }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-      >
-        <h1 className="text-white text-3xl font-bold">Welcome!</h1>
-      </motion.div>
-    )}
-  </AnimatePresence> */}
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Page Transition Animation */}
+      <AnimatePresence mode="wait">
+        {isAnimating && (
+          <motion.div className="fixed inset-0 z-20 flex items-center justify-center">
             {/* Layer 1 */}
             <motion.div
               className="absolute inset-0 bg-blue-900"
-              initial={{ x: "0%" }}
-              animate={{ x: "100%" }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+              initial={{ x: "0%", opacity: 1 }}
+              animate={{ x: "100%", opacity: 0.8}}
+              exit={{ x: "100%", opacity: 0.5 }}
+              transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
             />
 
             {/* Layer 2 */}
             <motion.div
               className="absolute inset-0 bg-blue-600"
-              initial={{ x: "20%" }}
-              animate={{ x: "100%" }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 1.3, ease: "easeInOut", delay: 0.3 }}
+              initial={{ x: "20%", opacity: 1 }}
+              animate={{ x: "100%", opacity: 0.8 }}
+              exit={{ x: "100%", opacity: 0.5 }}
+              transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
             />
+
             {/* Layer 3 */}
             <motion.div
               className="absolute inset-0 bg-blue-300"
-              initial={{ x: "40%" }}
-              animate={{ x: "100%" }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 1.1, ease: "easeInOut", delay: 0.4 }}
+              initial={{ x: "40%", opacity: 1 }}
+              animate={{ x: "100%", opacity: 0.8 }}
+              exit={{ x: "100%", opacity: 0.5 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.3 }}
             >
               <h1 className="text-blue-900 text-7xl text-left font-bold">
                 Welcome!
@@ -76,20 +63,27 @@ function App() {
         )}
       </AnimatePresence>
 
+      {/* Header & Navbar */}
       <div className="hidden lg:block">
         <SharedHeader />
       </div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/partnerships" element={<Partnerships />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/*" element={<Error />} />
-      </Routes>
+
+      {/* Wrap Routes in AnimatePresence & Ensure Key Changes */}
+      <AnimatePresence mode="wait">
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/*" element={<Error />} />
+        </Routes>
+      </AnimatePresence>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
