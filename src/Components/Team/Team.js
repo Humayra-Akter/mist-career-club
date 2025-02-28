@@ -1,159 +1,218 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 
-const dummyData = {
-  2025: {
-    president: {
-      name: "John Doe",
-      position: "President",
-      department: "CSE",
-      image: "https://via.placeholder.com/150",
+import brandPromotorFall2024 from "../../assets/panel/brandPromotorFall2024.jpg";
+import brandPromotorSpring from "../../assets/panel/brandPromotorSpring.jpg";
+import brandPromotorFall2023 from "../../assets/panel/brandPromotorFall2023.jpg";
+import clubCoordinatorFall2024 from "../../assets/panel/clubCoordinatorFall2024.jpg";
+import clubCoordinatorSpring from "../../assets/panel/clubCoordinatorSpring.jpg";
+import clubCoordinatorFall2023 from "../../assets/panel/clubCoordinatorFall2023.jpg";
+import communicationFall2024 from "../../assets/panel/communicationFall2024.jpg";
+import communicationSpring from "../../assets/panel/communicationSpring.jpg";
+import communicationFall2023 from "../../assets/panel/communicationFall2023.jpg";
+import creativeDesignFall2024 from "../../assets/panel/creativeDesignFall2024.jpg";
+import creativeDesignSpring from "../../assets/panel/creativeDesignSpring.jpg";
+import creativeDesignFall2023 from "../../assets/panel/creativeDesignFall2023.jpg";
+import eventManagementFall2024 from "../../assets/panel/eventManagementFall2024.jpg";
+import eventManagementSpring from "../../assets/panel/eventManagementSpring.jpg";
+import eventManagementFall2023 from "../../assets/panel/eventManagementFall2023.jpg";
+import generalSecretaryFall2024 from "../../assets/panel/generalSecretaryFall2024.jpg";
+import generalSecretarySpring from "../../assets/panel/generalSecretarySpring.jpg";
+import generalSecretaryFall2023 from "../../assets/panel/generalSecretaryFall2023.jpg";
+import logisticFall2024 from "../../assets/panel/logisticFall2024.jpg";
+import logisticSpring from "../../assets/panel/logisticSpring.jpg";
+import logisticFall2023 from "../../assets/panel/logisticFall2023.jpg";
+import presidentFall2024 from "../../assets/panel/presidentFall2024.jpg";
+import presidentSpring from "../../assets/panel/presidentSpring.jpg";
+import presidentFall2023 from "../../assets/panel/presidentFall2023.jpg";
+import workshopManagementFall2024 from "../../assets/panel/workshopManagementFall2024.jpg";
+import workshopSpring from "../../assets/panel/workshopSpring.jpg";
+import workshopManagementFall2023 from "../../assets/panel/workshopManagementFall2023.jpg";
+import ParticlesContainer from "./ParticlesContainer";
+
+const terms = [
+  {
+    term: "2024 Fall",
+    president: { name: "Maisha Tabassum", img: presidentFall2024 },
+    generalSecretary: { name: "Anik Dev Argho", img: generalSecretaryFall2024 },
+    clubCoordinator: {
+      name: "Istiaque Ibn Zahid",
+      img: clubCoordinatorFall2024,
     },
-    generalSecretary: {
-      name: "Jane Smith",
-      position: "General Secretary",
-      department: "EEE",
-      image: "https://via.placeholder.com/150",
-    },
-    directors: [
+    panel: [
       {
-        name: "Alice Brown",
-        position: "Event Management",
-        department: "BBA",
-        image: "https://via.placeholder.com/100",
+        position: "Brand Promoter",
+        name: "Puspita Khatun Papry",
+        img: brandPromotorFall2024,
       },
       {
-        name: "Bob White",
         position: "Communication",
-        department: "ME",
-        image: "https://via.placeholder.com/100",
+        name: "Abdullah Al Rafi",
+        img: communicationFall2024,
       },
       {
-        name: "Charlie Green",
-        position: "Brand Promotion",
-        department: "CE",
-        image: "https://via.placeholder.com/100",
-      },
-      {
-        name: "David Blue",
-        position: "Logistics",
-        department: "EEE",
-        image: "https://via.placeholder.com/100",
-      },
-      {
-        name: "Eve Yellow",
         position: "Creative Design",
-        department: "Arch",
-        image: "https://via.placeholder.com/100",
+        name: "Humayra Akter",
+        img: creativeDesignFall2024,
       },
       {
-        name: "Frank Red",
+        position: "Event Management",
+        name: "Saikat Islam Sagor",
+        img: eventManagementFall2024,
+      },
+      {
+        position: "Logistics",
+        name: "Redwan Ahmed Tamim",
+        img: logisticFall2024,
+      },
+      {
         position: "Workshop Management",
-        department: "IPE",
-        image: "https://via.placeholder.com/100",
+        name: "Farah Ismail",
+        img: workshopManagementFall2024,
       },
     ],
   },
-};
+  {
+    term: "2024 Spring",
+    president: { name: "Fardin Islam ahin", img: presidentSpring },
+    generalSecretary: { name: "Anik Dev Argho", img: generalSecretarySpring },
+    clubCoordinator: { name: "Farah Ismail", img: clubCoordinatorSpring },
+    panel: [
+      {
+        position: "Brand Promoter",
+        name: "Chaity Fariha",
+        img: brandPromotorSpring,
+      },
+      {
+        position: "Communication",
+        name: "Maisha Tabassum",
+        img: communicationSpring,
+      },
+      {
+        position: "Creative Design",
+        name: "Shaishab Das",
+        img: creativeDesignSpring,
+      },
+      {
+        position: "Event Management",
+        name: "Istiaque Ibn Zahid",
+        img: eventManagementSpring,
+      },
+      { position: "Logistics", name: "Hafiz ul Alam", img: logisticSpring },
+      {
+        position: "Workshop Management",
+        name: "Saikat Islam Sagor",
+        img: workshopSpring,
+      },
+    ],
+  },
+  {
+    term: "2023 Fall",
+    president: { name: "Shoeb Parvez Shawon", img: presidentFall2023 },
+    generalSecretary: {
+      name: "Md Istiaque Ahammed Sakib",
+      img: generalSecretaryFall2023,
+    },
+    clubCoordinator: { name: "Maliha Zerin", img: clubCoordinatorFall2023 },
+    panel: [
+      {
+        position: "Brand Promoter",
+        name: "Ononya Shahjahan",
+        img: brandPromotorFall2023,
+      },
+      {
+        position: "Communication",
+        name: "Tanvir Ahamed Srijan",
+        img: communicationFall2023,
+      },
+      {
+        position: "Creative Design",
+        name: "Sadik Bin Ashraf",
+        img: creativeDesignFall2023,
+      },
+      {
+        position: "Event Management",
+        name: "Md Soad Solaiman",
+        img: eventManagementFall2023,
+      },
+      { position: "Logistics", name: "Mehrab Al Islam", img: logisticFall2023 },
+      {
+        position: "Workshop Management",
+        name: "Md Mahmud Shihab Mahin",
+        img: workshopManagementFall2023,
+      },
+    ],
+  },
+];
 
 const Team = () => {
-  const [selectedYear, setSelectedYear] = useState(2025);
-  const panel = dummyData[selectedYear];
-
   return (
-    <div className="flex flex-col items-center w-full p-4 relative">
-      {/* Filter Options for Smaller Screens */}
-      <div className="w-full flex justify-center sm:hidden mb-4">
-        {[2025, 2024, 2023].map((year) => (
-          <motion.div
-            key={year}
-            whileHover={{ scale: 1.1 }}
-            className={`cursor-pointer px-4 py-2 mx-2 bg-gray-800 text-white rounded-lg shadow-lg ${
-              selectedYear === year ? "bg-gray-600" : ""
-            }`}
-            onClick={() => setSelectedYear(year)}
-          >
-            {year}
-          </motion.div>
-        ))}
-      </div>
+    <div>
+      <ParticlesContainer />
+      <h1 className="text-4xl font-extrabold text-center text-blue-900 my-12">
+        Meet Our Team
+      </h1>
+      {terms?.map((term, index) => (
+        <div
+          key={index}
+          className="mx-24 my-8 p-8 bg-gradient-to-tr from-slate-500 via-slate-300 to-blue-50 rounded-xl shadow-lg border border-gray-500"
+        >
+          {/* Term Title */}
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center border-b-4 border-blue-600 pb-2">
+            {term?.term} Term Panel
+          </h2>
 
-      {/* Sidebar for Larger Screens */}
-      <div className="hidden sm:flex fixed left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-lg shadow-lg z-10">
-        {[2025, 2024, 2023].map((year) => (
-          <motion.div
-            key={year}
-            whileHover={{ scale: 1.1 }}
-            className={`cursor-pointer p-2 ${
-              selectedYear === year ? "bg-gray-600" : ""
-            }`}
-            onClick={() => setSelectedYear(year)}
-          >
-            {year}
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Panel Display */}
-      <div className="flex flex-col items-center w-full justify-center gap-6 mt-10 sm:mt-0">
-        {/* President & General Secretary */}
-        <div className="flex flex-col sm:flex-row gap-6">
-          {[panel.president, panel.generalSecretary].map((leader, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="relative w-60 h-80 bg-gray-200 rounded-lg overflow-hidden shadow-lg"
-            >
-              <img
-                src={leader.image}
-                alt={leader.name}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center">
-                {leader.position}
+          {/* President & General Secretary */}
+          <div className="flex justify-center gap-16 mb-10">
+            {[term?.president, term?.generalSecretary]?.map((person, i) => (
+              <div key={i} className="text-center flex items-center flex-col">
+                <img
+                  src={person.img}
+                  alt={person.name}
+                  className="w-36 h-36 object-cover rounded-md border-4 border-blue-800 shadow-lg hover:scale-105 transition"
+                />
+                <p className="font-bold italic text-center text-blue-800 mt-2 text-lg">
+                  {person.name}
+                </p>
+                <p className="text-gray-800">
+                  {i === 0 ? "President" : "General Secretary"}
+                </p>
               </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-white p-4"
-              >
-                <p className="text-lg font-bold">{leader.name}</p>
-                <p>{leader.position}</p>
-                <p>{leader.department}</p>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Directors */}
-        <div className="grid lg:grid-cols-6 md:grid-cols-3 gap-4">
-          {panel.directors.map((director, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="relative w-40 h-56 bg-gray-200 rounded-lg overflow-hidden shadow-lg"
-            >
+          {/* Club Coordinator */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="text-center">
               <img
-                src={director.image}
-                alt={director.name}
-                className="w-full h-full object-cover"
+                src={term.clubCoordinator.img}
+                alt={term.clubCoordinator.name}
+                className="w-[130px] h-[130px] object-cover rounded-md border-4 border-blue-700 shadow-lg hover:scale-105 transition"
               />
-              <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-2 w-full text-center">
-                {director.position}
+              <p className="font-bold italic text-blue-700 mt-2 text-lg">
+                {term.clubCoordinator.name}
+              </p>
+              <p className="text-gray-800">Club Coordinator</p>
+            </div>
+          </div>
+
+          {/* Panel Members */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {term?.panel?.map((member, i) => (
+              <div key={i} className="text-center flex flex-col items-center">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-32 h-32 object-cover rounded-md border-4 border-blue-600 shadow-md hover:scale-105 transition"
+                />
+                <p className="font-semibold text-blue-600  italic mt-2 text-lg">
+                  {member.name}
+                </p>
+                <p className="text-gray-800 text-sm">{member.position}</p>
               </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-white p-4"
-              >
-                <p className="text-lg font-bold">{director.name}</p>
-                <p>{director.position}</p>
-                <p>{director.department}</p>
-              </motion.div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
