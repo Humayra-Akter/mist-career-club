@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import ParticlesContainer from "./ParticlesContainer";
 
 import brandPromotorFall2024 from "../../assets/panel/brandPromotorFall2024.jpg";
 import brandPromotorSpring from "../../assets/panel/brandPromotorSpring.jpg";
@@ -27,7 +29,6 @@ import presidentFall2023 from "../../assets/panel/presidentFall2023.jpg";
 import workshopManagementFall2024 from "../../assets/panel/workshopManagementFall2024.jpg";
 import workshopSpring from "../../assets/panel/workshopSpring.jpg";
 import workshopManagementFall2023 from "../../assets/panel/workshopManagementFall2023.jpg";
-import ParticlesContainer from "./ParticlesContainer";
 
 const terms = [
   {
@@ -146,72 +147,154 @@ const terms = [
 
 const Team = () => {
   return (
-    <div>
+    // <div>
+    //   <ParticlesContainer />
+    //   <h1 className="text-4xl font-extrabold text-center text-blue-900 my-12">
+    //     Meet Our Team
+    //   </h1>
+    //   {terms?.map((term, index) => (
+    //     <div
+    //       key={index}
+    //       className="mx-24 my-8 p-8 bg-gradient-to-tr from-slate-300 via-slate-100 to-blue-500 rounded-2xl shadow-inner border-x-2 border-x-gray-500"
+    //     >
+    //       {/* Term Title */}
+    //       <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center border-b-4 border-blue-600 pb-2">
+    //         {term?.term} Term Panel
+    //       </h2>
+
+    //       {/* President & General Secretary */}
+    //       <div className="flex justify-center gap-16 mb-10">
+    //         {[term?.president, term?.generalSecretary]?.map((person, i) => (
+    //           <div key={i} className="text-center flex items-center flex-col">
+    //             <img
+    //               src={person.img}
+    //               alt={person.name}
+    //               className="w-36 h-36 object-cover rounded-md border-4 border-blue-800 shadow-lg hover:scale-105 transition"
+    //             />
+    //             <p className="font-bold italic text-center text-blue-800 mt-2 text-lg">
+    //               {person.name}
+    //             </p>
+    //             <p className="text-gray-800">
+    //               {i === 0 ? "President" : "General Secretary"}
+    //             </p>
+    //           </div>
+    //         ))}
+    //       </div>
+
+    //       {/* Club Coordinator */}
+    //       <div className="flex items-center justify-center mb-8">
+    //         <div className="text-center">
+    //           <img
+    //             src={term.clubCoordinator.img}
+    //             alt={term.clubCoordinator.name}
+    //             className="w-[130px] h-[130px] object-cover rounded-md border-4 border-blue-700 shadow-lg hover:scale-105 transition"
+    //           />
+    //           <p className="font-bold italic text-blue-700 mt-2 text-lg">
+    //             {term.clubCoordinator.name}
+    //           </p>
+    //           <p className="text-gray-800">Club Coordinator</p>
+    //         </div>
+    //       </div>
+
+    //       {/* Panel Members */}
+    //       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+    //         {term?.panel?.map((member, i) => (
+    //           <div key={i} className="text-center flex flex-col items-center">
+    //             <img
+    //               src={member.img}
+    //               alt={member.name}
+    //               className="w-32 h-32 object-cover rounded-md border-4 border-blue-600 shadow-md hover:scale-105 transition"
+    //             />
+    //             <p className="font-semibold text-blue-600  italic mt-2 text-lg">
+    //               {member.name}
+    //             </p>
+    //             <p className="text-gray-800 text-sm">{member.position}</p>
+    //           </div>
+    //         ))}
+    //       </div>
+    //     </div>
+    //   ))}
+    // </div>
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 py-12 overflow-hidden">
       <ParticlesContainer />
-      <h1 className="text-4xl font-extrabold text-center text-blue-900 my-12">
+      <motion.h1
+        className="text-4xl font-bold text-center text-white mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         Meet Our Team
-      </h1>
+      </motion.h1>
+
       {terms?.map((term, index) => (
-        <div
+        <motion.div
           key={index}
-          className="mx-24 my-8 p-8 bg-gradient-to-tr from-slate-500 via-slate-300 to-blue-50 rounded-xl shadow-lg border border-gray-500"
+          className="mx-auto max-w-6xl bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-lg border border-white/20 my-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          {/* Term Title */}
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center border-b-4 border-blue-600 pb-2">
-            {term?.term} Term Panel
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            {term.term} Term Panel
           </h2>
 
-          {/* President & General Secretary */}
           <div className="flex justify-center gap-16 mb-10">
-            {[term?.president, term?.generalSecretary]?.map((person, i) => (
-              <div key={i} className="text-center flex items-center flex-col">
+            {[term.president, term.generalSecretary].map((person, i) => (
+              <motion.div
+                key={i}
+                className="text-center flex items-center flex-col"
+                whileHover={{ scale: 1.1 }}
+              >
                 <img
                   src={person.img}
                   alt={person.name}
-                  className="w-36 h-36 object-cover rounded-md border-4 border-blue-800 shadow-lg hover:scale-105 transition"
+                  className="w-36 h-36 object-cover rounded-full border-4 border-white shadow-lg"
                 />
-                <p className="font-bold italic text-center text-blue-800 mt-2 text-lg">
+                <p className="font-bold italic text-white mt-2 text-lg">
                   {person.name}
                 </p>
-                <p className="text-gray-800">
+                <p className="text-gray-300">
                   {i === 0 ? "President" : "General Secretary"}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          {/* Club Coordinator */}
           <div className="flex items-center justify-center mb-8">
-            <div className="text-center">
+            <motion.div className="text-center" whileHover={{ scale: 1.1 }}>
               <img
                 src={term.clubCoordinator.img}
                 alt={term.clubCoordinator.name}
-                className="w-[130px] h-[130px] object-cover rounded-md border-4 border-blue-700 shadow-lg hover:scale-105 transition"
+                className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
               />
-              <p className="font-bold italic text-blue-700 mt-2 text-lg">
+              <p className="font-bold italic text-white mt-2 text-lg">
                 {term.clubCoordinator.name}
               </p>
-              <p className="text-gray-800">Club Coordinator</p>
-            </div>
+              <p className="text-gray-300">Club Coordinator</p>
+            </motion.div>
           </div>
 
-          {/* Panel Members */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {term?.panel?.map((member, i) => (
-              <div key={i} className="text-center flex flex-col items-center">
+            {term.panel.map((member, i) => (
+              <motion.div
+                key={i}
+                className="text-center flex flex-col items-center"
+                whileHover={{ scale: 1.1 }}
+              >
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-32 h-32 object-cover rounded-md border-4 border-blue-600 shadow-md hover:scale-105 transition"
+                  className="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg"
                 />
-                <p className="font-semibold text-blue-600  italic mt-2 text-lg">
+                <p className="font-semibold text-white italic mt-2 text-lg">
                   {member.name}
                 </p>
-                <p className="text-gray-800 text-sm">{member.position}</p>
-              </div>
+                <p className="text-gray-300 text-sm">{member.position}</p>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
