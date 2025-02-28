@@ -77,8 +77,6 @@
 //             }
 //           }
 
-
-         
 //           /* Responsive Adjustments */
 //           @media (max-width: 768px) {
 //             .text-4xl {
@@ -99,10 +97,10 @@
 // };
 // export default Banner;
 
-
 import React from "react";
 import { motion } from "framer-motion";
 import banner from "../../assets/images/banner/banner.jpg";
+import ParticlesContainer from "../Team/ParticlesContainer";
 
 const Banner = () => {
   return (
@@ -121,7 +119,7 @@ const Banner = () => {
       ></motion.div>
 
       {/* Soft Gradient Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div> 
+      <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* Content with Smooth Fade Animation */}
       <motion.div

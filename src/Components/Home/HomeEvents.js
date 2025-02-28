@@ -5,23 +5,23 @@ import banner from "../../assets/images/banner/banner.jpg";
 const HomeEvents = () => {
   const [rocketPosition, setRocketPosition] = useState(0);
   const timelineRef = useRef(null);
- const handleScroll = () => {
-   if (timelineRef.current) {
-     const { top, bottom, height } =
-       timelineRef.current.getBoundingClientRect();
-     const viewportHeight = window.innerHeight;
+  const handleScroll = () => {
+    if (timelineRef.current) {
+      const { top, bottom, height } =
+        timelineRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
 
-     if (top < viewportHeight && bottom > 0) {
-       const visiblePart = Math.min(viewportHeight - top, height);
-       const scrolledRatio = visiblePart / height;
-       setRocketPosition(scrolledRatio * height * 0.8); 
-     } else if (bottom <= 0) {
-       setRocketPosition(height);
-     } else {
-       setRocketPosition(0);
-     }
-   }
- };
+      if (top < viewportHeight && bottom > 0) {
+        const visiblePart = Math.min(viewportHeight - top, height);
+        const scrolledRatio = visiblePart / height;
+        setRocketPosition(scrolledRatio * height * 0.8);
+      } else if (bottom <= 0) {
+        setRocketPosition(height);
+      } else {
+        setRocketPosition(0);
+      }
+    }
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -30,24 +30,19 @@ const HomeEvents = () => {
 
   const eventTimeline = [
     {
-      description: "MIST Job Fair 2025",
-      start: "27 April 25",
-      end: "29 April 25",
+      description: "EngiBiz (Business Case Competition)",
+      start: "1 Jan 25",
+      end: "1 Mar 25",
     },
     {
       description: "Campus Hour -2",
       start: "13 Mar 25",
-      end: "13 Mar 25",
+      end: "3 Mar 25",
     },
     {
-      description: "EngiBiz (Business Case Competition)",
-      start: "1 Dec 24",
-      end: "5 Jan 25",
-    },
-    {
-      description: "Campus Hour -1",
-      start: "16 Jan 25",
-      end: "16 Jan 25",
+      description: "MIST Job Fair 2025",
+      start: "27 April 25",
+      end: "29 April 25",
     },
   ];
 
@@ -56,7 +51,7 @@ const HomeEvents = () => {
       <h2 className="mt-20 text-3xl text-blue-500 lg:text-4xl text-center mb-12 animate-fade-in">
         MCC Event Timeline
       </h2>
-     
+
       <div
         ref={timelineRef}
         className="relative text-white py-16 px-4 lg:px-16 overflow-hidden"
@@ -99,9 +94,7 @@ const HomeEvents = () => {
                   index % 2 === 0 ? "mr-auto" : "ml-auto"
                 }`}
               >
-                <h3
-                  className="text-xl lg:text-2xl text-secondary font-bold mb-4"
-                >
+                <h3 className="text-xl lg:text-2xl text-secondary font-bold mb-4">
                   {event.description}
                 </h3>
                 <p className="text-sm lg:text-lg mb-4 text-gray-300">

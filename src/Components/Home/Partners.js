@@ -1,13 +1,22 @@
 import ahar from "../../assets/partnership/Ahar/ahar_logo.png";
-import datacomp from "../../assets/partnership/DataCamp Donates/DC_Donates_logo_inverted.png";
+import datacomp from "../../assets/partnership/DataCamp/DC_Donates_logo_inverted.png";
+import bat from "../../assets/partnership/bat/bat.png";
+import sheStem from "../../assets/partnership/sheStem/sheStem.png";
+import singer from "../../assets/partnership/singer/singer.png";
+import uniliver from "../../assets/partnership/uniliver/uniliver.png";
 
 import React from "react";
 
 const Partners = () => {
-  const partners = [
-    { title: "Ahar", img: ahar, color: "#102A43" },
-    { title: "DataComp", img: datacomp, color: "#1D3A5F" },
-  ];
+const partners = [
+  { title: "Ahar", img: ahar, color: "#0D3B66" }, // Dark Blue
+  { title: "DataComp", img: datacomp, color: "#12406b" }, // Medium Blue
+  { title: "BAT", img: bat, color: "#1a3c5c" }, // Bright Blue
+  { title: "SheStem", img: sheStem, color: "#22507a" }, // Sky Blue
+  { title: "Singer", img: singer, color: "#2d679c" }, // Light Blue
+  { title: "Unilever", img: uniliver, color: "#32618c" }, // Deep Indigo
+];
+
 
   const isSmallScreen = window.innerWidth < 768;
 
