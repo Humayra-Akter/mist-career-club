@@ -41,7 +41,7 @@ const terms = [
     },
     panel: [
       {
-        position: "Brand Promoter",
+        position: "Brand Promotion",
         name: "Puspita Khatun Papry",
         img: brandPromotorFall2024,
       },
@@ -74,12 +74,12 @@ const terms = [
   },
   {
     term: "2024 Spring",
-    president: { name: "Fardin Islam ahin", img: presidentSpring },
+    president: { name: "Fardin Islam Mahin", img: presidentSpring },
     generalSecretary: { name: "Anik Dev Argho", img: generalSecretarySpring },
     clubCoordinator: { name: "Farah Ismail", img: clubCoordinatorSpring },
     panel: [
       {
-        position: "Brand Promoter",
+        position: "Brand Promotion",
         name: "Chaity Fariha",
         img: brandPromotorSpring,
       },
@@ -116,7 +116,7 @@ const terms = [
     clubCoordinator: { name: "Maliha Zerin", img: clubCoordinatorFall2023 },
     panel: [
       {
-        position: "Brand Promoter",
+        position: "Brand Promotion",
         name: "Ononya Shahjahan",
         img: brandPromotorFall2023,
       },
@@ -147,74 +147,6 @@ const terms = [
 
 const Team = () => {
   return (
-    // <div>
-    //   <ParticlesContainer />
-    //   <h1 className="text-4xl font-extrabold text-center text-blue-900 my-12">
-    //     Meet Our Team
-    //   </h1>
-    //   {terms?.map((term, index) => (
-    //     <div
-    //       key={index}
-    //       className="mx-24 my-8 p-8 bg-gradient-to-tr from-slate-300 via-slate-100 to-blue-500 rounded-2xl shadow-inner border-x-2 border-x-gray-500"
-    //     >
-    //       {/* Term Title */}
-    //       <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center border-b-4 border-blue-600 pb-2">
-    //         {term?.term} Term Panel
-    //       </h2>
-
-    //       {/* President & General Secretary */}
-    //       <div className="flex justify-center gap-16 mb-10">
-    //         {[term?.president, term?.generalSecretary]?.map((person, i) => (
-    //           <div key={i} className="text-center flex items-center flex-col">
-    //             <img
-    //               src={person.img}
-    //               alt={person.name}
-    //               className="w-36 h-36 object-cover rounded-md border-4 border-blue-800 shadow-lg hover:scale-105 transition"
-    //             />
-    //             <p className="font-bold italic text-center text-blue-800 mt-2 text-lg">
-    //               {person.name}
-    //             </p>
-    //             <p className="text-gray-800">
-    //               {i === 0 ? "President" : "General Secretary"}
-    //             </p>
-    //           </div>
-    //         ))}
-    //       </div>
-
-    //       {/* Club Coordinator */}
-    //       <div className="flex items-center justify-center mb-8">
-    //         <div className="text-center">
-    //           <img
-    //             src={term.clubCoordinator.img}
-    //             alt={term.clubCoordinator.name}
-    //             className="w-[130px] h-[130px] object-cover rounded-md border-4 border-blue-700 shadow-lg hover:scale-105 transition"
-    //           />
-    //           <p className="font-bold italic text-blue-700 mt-2 text-lg">
-    //             {term.clubCoordinator.name}
-    //           </p>
-    //           <p className="text-gray-800">Club Coordinator</p>
-    //         </div>
-    //       </div>
-
-    //       {/* Panel Members */}
-    //       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-    //         {term?.panel?.map((member, i) => (
-    //           <div key={i} className="text-center flex flex-col items-center">
-    //             <img
-    //               src={member.img}
-    //               alt={member.name}
-    //               className="w-32 h-32 object-cover rounded-md border-4 border-blue-600 shadow-md hover:scale-105 transition"
-    //             />
-    //             <p className="font-semibold text-blue-600  italic mt-2 text-lg">
-    //               {member.name}
-    //             </p>
-    //             <p className="text-gray-800 text-sm">{member.position}</p>
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 py-12 overflow-hidden">
       <ParticlesContainer />
       <motion.h1
