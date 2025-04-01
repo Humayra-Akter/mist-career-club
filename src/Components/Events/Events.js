@@ -11,6 +11,7 @@ import img233 from "../../assets/2023/HSBCWorkplacementSeminar/1.jpg";
 import img234 from "../../assets/2023/MISTCampusTownhallGPacademy/1.jpg";
 import img241 from "../../assets/2024/catchTheHour2/1.jpg";
 import img242 from "../../assets/2024/riseAboveAll/1.png";
+import img251 from "../../assets/2025/Engibiz/9.jpg";
 import Modal from "./Modal";
 
 const eventData = {
@@ -31,6 +32,7 @@ const eventData = {
     { name: "Catch The Hour 2", image: img241, year: 2024 },
     { name: "Rise Above All", image: img242, year: 2024 },
   ],
+  2025: [{ name: "Engibiz", image: img251, year: 2025 }],
 };
 
 const Events = () => {
@@ -81,7 +83,7 @@ const Events = () => {
       </div>
 
       {/* Event Cards with Animation */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6" >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6">
         {filteredEvents.map((event, index) => (
           <motion.div
             key={index}

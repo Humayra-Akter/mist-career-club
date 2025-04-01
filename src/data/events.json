@@ -219,5 +219,23 @@
         "../assets/2024/riseAboveAll/2.png"
       ]
     }
+  ],
+  "2025": [
+    {
+      "name": "Engibiz",
+      "images": [
+        "../assets/2025/engibiz/1.jpg",
+        "../assets/2025/engibiz/2.jpg",
+        "../assets/2025/engibiz/3.jpg",
+        "../assets/2025/engibiz/4.jpg",
+        "../assets/2025/engibiz/5.jpg",
+        "../assets/2025/engibiz/6.jpg",
+        "../assets/2025/engibiz/7.jpg",
+        "../assets/2025/engibiz/8.jpg",
+        "../assets/2025/engibiz/9.jpg",
+        "../assets/2025/engibiz/10.jpg",
+        "../assets/2025/engibiz/11.jpg"
+      ]
+    }
   ]
 }
