@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       <Activities />
       <KeyArea />
-      <HomeEvents />
+      {/* <HomeEvents /> */}
       <Partners />
     </div>
   );
