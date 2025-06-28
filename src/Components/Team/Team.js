@@ -5,32 +5,91 @@ import ParticlesContainer from "./ParticlesContainer";
 import brandPromotorFall2024 from "../../assets/panel/brandPromotorFall2024.jpg";
 import brandPromotorSpring from "../../assets/panel/brandPromotorSpring.jpg";
 import brandPromotorFall2023 from "../../assets/panel/brandPromotorFall2023.jpg";
+import brandPromotorSpring2025 from "../../assets/panel/brandPromotorSpring2025.jpg";
 import clubCoordinatorFall2024 from "../../assets/panel/clubCoordinatorFall2024.jpg";
 import clubCoordinatorSpring from "../../assets/panel/clubCoordinatorSpring.jpg";
 import clubCoordinatorFall2023 from "../../assets/panel/clubCoordinatorFall2023.jpg";
+import clubCoordinatorSpring2025 from "../../assets/panel/clubCoordinatorSpring2025..jpg";
 import communicationFall2024 from "../../assets/panel/communicationFall2024.jpg";
 import communicationSpring from "../../assets/panel/communicationSpring.jpg";
 import communicationFall2023 from "../../assets/panel/communicationFall2023.jpg";
+import communicationSpring2025 from "../../assets/panel/communicationSpring2025.jpg";
 import creativeDesignFall2024 from "../../assets/panel/creativeDesignFall2024.jpg";
 import creativeDesignSpring from "../../assets/panel/creativeDesignSpring.jpg";
 import creativeDesignFall2023 from "../../assets/panel/creativeDesignFall2023.jpg";
+import creativeDesignSpring2025 from "../../assets/panel/creativeDesignSpring2025.jpg";
 import eventManagementFall2024 from "../../assets/panel/eventManagementFall2024.jpg";
 import eventManagementSpring from "../../assets/panel/eventManagementSpring.jpg";
 import eventManagementFall2023 from "../../assets/panel/eventManagementFall2023.jpg";
+import eventManagementSpring2025 from "../../assets/panel/eventManagementSpring2025.jpg";
 import generalSecretaryFall2024 from "../../assets/panel/generalSecretaryFall2024.jpg";
 import generalSecretarySpring from "../../assets/panel/generalSecretarySpring.jpg";
 import generalSecretaryFall2023 from "../../assets/panel/generalSecretaryFall2023.jpg";
+import generalSecretarySpring2025 from "../../assets/panel/generalSecretarySpring2025.jpg";
 import logisticFall2024 from "../../assets/panel/logisticFall2024.jpg";
 import logisticSpring from "../../assets/panel/logisticSpring.jpg";
 import logisticFall2023 from "../../assets/panel/logisticFall2023.jpg";
+import logisticSpring2025 from "../../assets/panel/logisticSpring2025.jpg";
 import presidentFall2024 from "../../assets/panel/presidentFall2024.jpg";
 import presidentSpring from "../../assets/panel/presidentSpring.jpg";
 import presidentFall2023 from "../../assets/panel/presidentFall2023.jpg";
+import presidentSpring2025 from "../../assets/panel/presidentSpring2025.jpg";
 import workshopManagementFall2024 from "../../assets/panel/workshopManagementFall2024.jpg";
 import workshopSpring from "../../assets/panel/workshopSpring.jpg";
 import workshopManagementFall2023 from "../../assets/panel/workshopManagementFall2023.jpg";
+import workshopSpring2025 from "../../assets/panel/workshopSpring2025.jpg";
+import digitalSolutionSpring2025 from "../../assets/panel/digitalSolutionSpring2025.jpg";
 
 const terms = [
+  {
+    term: "2025 Spring",
+    president: { name: "Md. Nazmul Hasan Nayeem", img: presidentSpring2025 },
+    generalSecretary: {
+      name: "Md. Zahid Adnan Fardin",
+      img: generalSecretarySpring2025,
+    },
+    clubCoordinator: {
+      name: "Md. Asiqur Rahman Asif",
+      img: clubCoordinatorSpring2025,
+    },
+    panel: [
+      {
+        position: "Digital Solution",
+        name: "Arif Abdullah",
+        img: digitalSolutionSpring2025,
+      },
+      {
+        position: "Brand Promotion",
+        name: "Fatema Tuz Zohora Mim",
+        img: brandPromotorSpring2025,
+      },
+      {
+        position: "Communication",
+        name: "Udoy Chandra Shil",
+        img: communicationSpring2025,
+      },
+      {
+        position: "Creative Design",
+        name: "Sadiya Tabassum",
+        img: creativeDesignSpring2025,
+      },
+      {
+        position: "Event Management",
+        name: "Ridoanul Islam Rony",
+        img: eventManagementSpring2025,
+      },
+      {
+        position: "Logistics",
+        name: "Md. Ashraful Islam Khan",
+        img: logisticSpring2025,
+      },
+      {
+        position: "Workshop Management",
+        name: "S M Mansib Azad",
+        img: workshopSpring2025,
+      },
+    ],
+  },
   {
     term: "2024 Fall",
     president: { name: "Maisha Tabassum", img: presidentFall2024 },
@@ -168,7 +227,7 @@ const Team = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">
-            {term.term} Term Panel
+            {term?.term} Term Panel
           </h2>
 
           <div className="flex justify-center gap-16 mb-10">
@@ -193,8 +252,11 @@ const Team = () => {
             ))}
           </div>
 
-          <div className="flex items-center justify-center mb-8">
-            <motion.div className="text-center" whileHover={{ scale: 1.1 }}>
+          <div className="flex justify-center mb-8">
+            <motion.div
+              className="flex flex-col items-center text-center"
+              whileHover={{ scale: 1.1 }}
+            >
               <img
                 src={term.clubCoordinator.img}
                 alt={term.clubCoordinator.name}
@@ -207,8 +269,12 @@ const Team = () => {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {term.panel.map((member, i) => (
+          <div
+            className={`grid grid-cols-2 md:grid-cols-3 ${
+              term.panel.length === 7 ? "lg:grid-cols-7" : "lg:grid-cols-6"
+            } gap-8`}
+          >
+            {term?.panel.map((member, i) => (
               <motion.div
                 key={i}
                 className="text-center flex flex-col items-center"
