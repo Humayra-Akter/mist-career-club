@@ -237,11 +237,16 @@ const Team = () => {
                 className="text-center flex items-center flex-col"
                 whileHover={{ scale: 1.1 }}
               >
-                <img
-                  src={person.img}
-                  alt={person.name}
-                  className="w-36 h-36 object-cover rounded-full border-4 border-white shadow-lg"
-                />
+                <div className="relative w-36 h-36 rounded-full p-[4px] bg-gradient-to-r from-red-500 via-orange-500 to-red-500 animate-gradient-slow bg-[length:200%_200%] bg-[position:0%_50%]">
+                  <div className="w-full h-full bg-gray-900 rounded-full flex items-center justify-center">
+                    <img
+                      src={person.img}
+                      alt={person.name}
+                      className="w-36 h-36 object-cover rounded-full"
+                    />
+                  </div>
+                </div>
+
                 <p className="font-bold italic text-white mt-2 text-lg">
                   {person.name}
                 </p>
@@ -257,11 +262,15 @@ const Team = () => {
               className="flex flex-col items-center text-center"
               whileHover={{ scale: 1.1 }}
             >
-              <img
-                src={term.clubCoordinator.img}
-                alt={term.clubCoordinator.name}
-                className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
-              />
+              <div className="relative w-32 h-32 rounded-full p-[4px]  bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animate-gradient-slow bg-[length:200%_200%] bg-[position:0%_50%]">
+                <div className="w-full h-full bg-gray-900 rounded-full flex items-center justify-center">
+                  <img
+                    src={term.clubCoordinator.img}
+                    alt={term.clubCoordinator.name}
+                    className="w-32 h-32 object-cover rounded-full"
+                  />
+                </div>
+              </div>
               <p className="font-bold italic text-white mt-2 text-lg">
                 {term.clubCoordinator.name}
               </p>
@@ -280,11 +289,16 @@ const Team = () => {
                 className="text-center flex flex-col items-center"
                 whileHover={{ scale: 1.1 }}
               >
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg"
-                />
+                <div className="relative w-32 h-32 rounded-full p-[4px] bg-gradient-to-r from-green-400 via-blue-500 to-teal-400 animate-gradient-slow bg-[length:200%_200%] bg-[position:0%_50%]">
+                  <div className="w-full h-full bg-gray-900 rounded-full flex items-center justify-center">
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="w-32 h-32 object-cover rounded-full"
+                    />
+                  </div>
+                </div>
+
                 <p className="font-semibold text-white italic mt-2 text-lg">
                   {member.name}
                 </p>
