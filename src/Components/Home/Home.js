@@ -16,8 +16,8 @@ const Home = () => {
         <Organogram />
       </div>
       <Activities />
-      <KeyArea />
       <HomeEvents />
+      <KeyArea />
       <Partners />
     </div>
   );
