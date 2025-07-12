@@ -38,7 +38,7 @@ const Organogram = () => {
       {/* Directors Section */}
       <div className="text-center">
         <h2 className="text-2xl font-semibold mb-6">Directors</h2>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex justify-center gap-6">
           {[
             "Event Management",
             "Communication",
@@ -46,6 +46,7 @@ const Organogram = () => {
             "Logistics",
             "Creative Design",
             "Workshop Management",
+            "Digital Solution",
           ].map((category) => (
             <div
               key={category}

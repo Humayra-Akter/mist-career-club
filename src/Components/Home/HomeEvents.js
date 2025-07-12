@@ -29,8 +29,8 @@ const HomeEvents = () => {
 
   return (
     <div>
-      <h2 className="mt-20 text-3xl text-blue-800 lg:text-4xl text-center mb-12 animate-fade-in">
-        Upcoming Event
+      <h2 className="mt-20 text-3xl text-blue-800 lg:text-4xl text-center mb-7 animate-fade-in">
+        Recent Event in 2025
       </h2>
 
       <div className="relative text-white py-16 px-4 lg:px-16 overflow-hidden">

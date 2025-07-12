@@ -11,10 +11,10 @@ const Partners = () => {
 const partners = [
   { title: "Ahar", img: ahar, color: "#0D3B66" }, // Dark Blue
   { title: "DataComp", img: datacomp, color: "#12406b" }, // Medium Blue
-  { title: "BAT", img: bat, color: "#1a3c5c" }, // Bright Blue
+  // { title: "BAT", img: bat, color: "#1a3c5c" }, // Bright Blue
   { title: "SheStem", img: sheStem, color: "#22507a" }, // Sky Blue
-  { title: "Singer", img: singer, color: "#2d679c" }, // Light Blue
-  { title: "Unilever", img: uniliver, color: "#32618c" }, // Deep Indigo
+  // { title: "Singer", img: singer, color: "#2d679c" }, // Light Blue
+  // { title: "Unilever", img: uniliver, color: "#32618c" }, // Deep Indigo
 ];
 
 

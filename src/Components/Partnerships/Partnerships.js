@@ -10,10 +10,10 @@ import ParticlesContainer from "../Team/ParticlesContainer";
 const partners = [
   { title: "Ahar", img: ahar, color: "#0D3B66" },
   { title: "DataCamp", img: datacomp, color: "#1E4D92" },
-  { title: "BAT", img: bat, color: "#2563EB" },
+  // { title: "BAT", img: bat, color: "#2563EB" },
   { title: "SheStem", img: sheStem, color: "#3B82F6" },
-  { title: "Singer", img: singer, color: "#60A5FA" },
-  { title: "Unilever", img: uniliver, color: "#1E40AF" },
+  // { title: "Singer", img: singer, color: "#60A5FA" },
+  // { title: "Unilever", img: uniliver, color: "#1E40AF" },
 ];
 
 const Partnerships = () => {
@@ -28,7 +28,8 @@ const Partnerships = () => {
           Our Valued Partnerships
         </h1>
         <p className="text-lg mt-4 max-w-2xl mx-auto text-gray-300">
-          Collaborating with industry leaders to drive innovation, foster growth, and create impactful solutions together.
+          Collaborating with industry leaders to drive innovation, foster
+          growth, and create impactful solutions together.
         </p>
       </section>
 
@@ -65,9 +66,15 @@ const Partnerships = () => {
           Join our growing network of forward-thinking companies and
           organizations. Let’s build something amazing together!
         </p>
-        <button className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-gray-200 transition">
-          Become a Partner
-        </button>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=mistcareerclub.mist@gmail.com&su=Partnership%20Inquiry&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20partnering%20with%20MIST%20Career%20Club.%20Please%20let%20me%20know%20the%20next%20steps.%0D%0A%0D%0ABest%20regards%2C"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-gray-200 transition">
+            Become a Partner
+          </button>
+        </a>
       </div>
     </div>
   );
