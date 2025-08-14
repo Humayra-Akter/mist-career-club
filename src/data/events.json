@@ -2,6 +2,7 @@
   "2022": [
     {
       "name": "Career On Point 2",
+      "description": "Career On Point 2 was an immersive career development program designed to bridge the gap between academic learning and professional demands. The event featured expert-led sessions on resume writing, interview preparation, and effective networking strategies. Students engaged in interactive discussions, gaining valuable insights to confidently navigate their career paths.",
       "images": [
         "../assets/2022/careerOnPoint2/1.jpg",
         "../assets/2022/careerOnPoint2/2.jpg",
@@ -26,6 +27,7 @@
     },
     {
       "name": "Catch The Hour",
+      "description": "Catch The Hour was a dynamic workshop designed to enhance time management skills among students and young professionals. Through hands-on activities and real-world scenarios, participants learned to prioritize tasks, manage deadlines, and maintain a healthy work-life balance. The event encouraged personal growth while fostering discipline and productivity.",
       "images": [
         "../assets/2022/catchTheHour/1.jpg",
         "../assets/2022/catchTheHour/2.jpg",
@@ -60,6 +62,7 @@
     },
     {
       "name": "MIST Job Fair 2022",
+      "description": "MIST Job Fair 2022 brought together leading companies, startups, and organizations to connect with talented students and graduates. The fair featured career booths, on-the-spot interviews, and networking opportunities that helped participants explore diverse career options. It served as a vital platform for employers and job seekers to engage in meaningful conversations.",
       "images": [
         "../assets/2022/MISTJobFair2022/1.jpg",
         "../assets/2022/MISTJobFair2022/2.jpg",
@@ -97,6 +100,7 @@
     },
     {
       "name": "Road to Your Dream Survey",
+      "description": "The Road to Your Dream Survey was an insightful initiative aimed at understanding students’ career aspirations and challenges. By collecting and analyzing responses, the program shed light on trends, preferences, and skill gaps. The findings served as a foundation for designing targeted career development programs.",
       "images": [
         "../assets/2022/roadToyourdreamSurvey/1.jpg",
         "../assets/2022/roadToyourdreamSurvey/2.jpg",
@@ -105,6 +109,7 @@
     },
     {
       "name": "Study Abroad",
+      "description": "Study Abroad was an informative seminar series that guided students through the process of pursuing education overseas. Experienced speakers shared tips on applications, scholarships, and adapting to different cultures. The sessions inspired students to broaden their horizons and embrace global opportunities.",
       "images": [
         "../assets/2022/studyAbroad/1.jpg",
         "../assets/2022/studyAbroad/2.jpg",
@@ -122,6 +127,7 @@
   "2023": [
     {
       "name": "Campus to Corporate by BAT",
+      "description": "Campus to Corporate by BAT was a transformative workshop that prepared students for the transition from academic life to professional careers. The event featured interactive sessions on corporate culture, skill development, and networking strategies, empowering participants to excel in their future workplaces.",
       "images": [
         "../assets/2023/campusToCorporatebyBAT/1.jpg",
         "../assets/2023/campusToCorporatebyBAT/2.jpg",
@@ -139,6 +145,7 @@
     },
     {
       "name": "Career Growth Accelerator",
+      "description": "Career Growth Accelerator equipped participants with strategies for rapid professional advancement. Covering leadership, networking, and skill development, the program inspired attendees to take proactive steps toward career growth. Practical sessions and mentorship opportunities made it a highly impactful experience.",
       "images": [
         "../assets/2023/careerGrowthAccelarator/1.jpg",
         "../assets/2023/careerGrowthAccelarator/2.jpg",
@@ -155,6 +162,7 @@
     },
     {
       "name": "HSBC Work Placement Seminar",
+      "description": "The HSBC Work Placement Seminar introduced students to internship and placement opportunities at one of the world’s leading financial institutions. Company representatives shared application tips, role expectations, and growth prospects, offering a valuable peek into the banking and finance sector.",
       "images": [
         "../assets/2023/HSBCWorkplacementSeminar/1.jpg",
         "../assets/2023/HSBCWorkplacementSeminar/2.jpg",
@@ -171,6 +179,7 @@
     },
     {
       "name": "MIST Campus Townhall GP Academy",
+      "description": "The MIST Campus Townhall GP Academy was an open forum where students engaged directly with industry leaders. Discussions covered innovation, entrepreneurship, and emerging career trends, fostering an environment of collaboration and forward thinking.",
       "images": [
         "../assets/2023/MISTCampusTownhallGPacademy/1.jpg",
         "../assets/2023/MISTCampusTownhallGPacademy/2.jpg",
@@ -198,6 +207,7 @@
   "2024": [
     {
       "name": "Catch The Hour 2",
+      "description": "Catch The Hour 2 was a follow-up workshop that continued to focus on enhancing time management skills. Participants engaged in advanced techniques for prioritizing tasks, setting goals, and optimizing productivity. The event provided practical tools and strategies to help attendees manage their time effectively in both personal and professional settings.",
       "images": [
         "../assets/2024/catchTheHour2/1.jpg",
         "../assets/2024/catchTheHour2/2.jpg",
@@ -214,6 +224,7 @@
     },
     {
       "name": "Rise Above All",
+      "description": "Rise Above All was an empowering event that focused on personal development and resilience. Through motivational talks, workshops, and interactive sessions, participants learned to overcome challenges, embrace change, and cultivate a positive mindset. The event inspired attendees to rise above obstacles and pursue their goals with confidence.",
       "images": [
         "../assets/2024/riseAboveAll/1.png",
         "../assets/2024/riseAboveAll/2.png"
@@ -223,6 +234,7 @@
   "2025": [
     {
       "name": "Engibiz",
+      "description": "Engibiz celebrated innovation and entrepreneurship within engineering disciplines. The event showcased student-led projects, startup ideas, and industry collaborations, fostering a culture of creativity and problem-solving.",
       "images": [
         "../assets/2025/engibiz/1.jpg",
         "../assets/2025/engibiz/2.jpg",
@@ -235,6 +247,42 @@
         "../assets/2025/engibiz/9.jpg",
         "../assets/2025/engibiz/10.jpg",
         "../assets/2025/engibiz/11.jpg"
+      ]
+    },
+    {
+      "name": "MIST Job Fair 2025",
+      "description": "MIST Job Fair 2025 connected graduating students with a wide array of employers from different sectors. With career counseling booths, networking sessions, and on-the-spot interviews, the fair provided a dynamic platform for students to launch their careers.",
+      "images": [
+        "../assets/2025/jobFair/1.jpg",
+        "../assets/2025/jobFair/2.jpg",
+        "../assets/2025/jobFair/3.jpg",
+        "../assets/2025/jobFair/4.jpg",
+        "../assets/2025/jobFair/5.jpg",
+        "../assets/2025/jobFair/6.jpg",
+        "../assets/2025/jobFair/7.jpg",
+        "../assets/2025/jobFair/8.jpg",
+        "../assets/2025/jobFair/9.jpg",
+        "../assets/2025/jobFair/10.jpg",
+        "../assets/2025/jobFair/11.jpg",
+        "../assets/2025/jobFair/12.jpg",
+        "../assets/2025/jobFair/13.jpg",
+        "../assets/2025/jobFair/14.jpg",
+        "../assets/2025/jobFair/15.jpg",
+        "../assets/2025/jobFair/16.jpg",
+        "../assets/2025/jobFair/17.jpg",
+        "../assets/2025/jobFair/18.jpg",
+        "../assets/2025/jobFair/19.jpg",
+        "../assets/2025/jobFair/20.jpg",
+        "../assets/2025/jobFair/21.jpg",
+        "../assets/2025/jobFair/22.jpg",
+        "../assets/2025/jobFair/23.jpg",
+        "../assets/2025/jobFair/24.jpg",
+        "../assets/2025/jobFair/25.jpg",
+        "../assets/2025/jobFair/26.jpg",
+        "../assets/2025/jobFair/27.jpg",
+        "../assets/2025/jobFair/28.jpg",
+        "../assets/2025/jobFair/29.jpg",
+        "../assets/2025/jobFair/30.jpg"
       ]
     }
   ]

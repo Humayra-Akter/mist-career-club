@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import img221 from "../../assets/2022/careerOnPoint2/1.jpg";
@@ -13,6 +12,7 @@ import img234 from "../../assets/2023/MISTCampusTownhallGPacademy/1.jpg";
 import img241 from "../../assets/2024/catchTheHour2/1.jpg";
 import img242 from "../../assets/2024/riseAboveAll/1.png";
 import img251 from "../../assets/2025/Engibiz/9.jpg";
+import img252 from "../../assets/2025/jobFair/1.jpg";
 import Modal from "./Modal";
 
 const eventData = {
@@ -33,7 +33,10 @@ const eventData = {
     { name: "Catch The Hour 2", image: img241, year: 2024 },
     { name: "Rise Above All", image: img242, year: 2024 },
   ],
-  2025: [{ name: "Engibiz", image: img251, year: 2025 }],
+  2025: [
+    { name: "MIST Job Fair 2025", image: img252, year: 2025 },
+    { name: "Engibiz", image: img251, year: 2025 },
+  ],
 };
 
 const Events = () => {

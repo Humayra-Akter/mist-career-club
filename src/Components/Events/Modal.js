@@ -50,10 +50,7 @@ const Modal = ({ event, onClose }) => {
             {/* Content */}
             <div className="p-6 mt-2 max-h-[75vh] overflow-y-auto">
               <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                {eventDetails?.description || "Details coming soon."}
               </p>
 
               {/* Image Gallery */}
